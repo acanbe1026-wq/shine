@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admaster/
+Disallow: /admaster/
+Disallow: /admaster_class/
+Disallow: /admin_bbs/
+Disallow: /html/
+Disallow: /smarteditor/
+Disallow: /upfile/
+Allow: /

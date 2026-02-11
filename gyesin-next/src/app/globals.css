@@ -1,0 +1,75 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+@import "tailwindcss";
+
+.font-gmarket {
+  font-family: 'GmarketSans', sans-serif;
+}
+
+@font-face {
+    font-family: 'Doklip';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Dokrip.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.font-doklip {
+  font-family: 'Doklip', sans-serif;
+}
+
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Pretendard", sans-serif;
+  --font-mono: var(--font-geist-mono);
+
+  /* Custom Colors set by User */
+  --color-deep-blue: #050A18;
+  --color-deep-black: #050A18;
+  /* Mapping deep-black to deep-blue for backward compatibility */
+  --color-neon-cyan: #00F3FF;
+  --color-neon-purple: #B23AFF;
+  --color-neon-green: #00FF94;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #050A18;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-150%) skewX(-25deg); }
+  100% { transform: translateX(150%) skewX(-25deg); }
+}
+
+.animate-shimmer-sweep {
+  animation: shimmer-sweep 2.5s ease-in-out infinite; 
+  animation-delay: 1s;
+}
+
+@keyframes shimmer-periodic {
+  0% { transform: translateX(-200%) skewX(-25deg); }
+  20% { transform: translateX(200%) skewX(-25deg); }
+  100% { transform: translateX(200%) skewX(-25deg); }
+}
+
+.animate-shimmer-periodic {
+  animation: shimmer-periodic 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
