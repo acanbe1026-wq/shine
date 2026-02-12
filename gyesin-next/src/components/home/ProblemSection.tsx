@@ -93,7 +93,7 @@ const MagneticCard = ({ children, className }: { children: React.ReactNode, clas
         <div ref={cardRef} className="h-full relative z-10 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md 
         hover:bg-white/10 hover:border-neon-cyan/50 hover:shadow-[0_0_30px_rgba(0,243,255,0.15)] 
         transition-colors duration-300 overflow-hidden group">
-            <div ref={contentRef} className="p-8 h-full flex flex-col relative z-20">
+            <div ref={contentRef} className="p-6 md:p-8 h-full flex flex-col relative z-20">
                 {children}
             </div>
             {/* Hover Glow Effect */}

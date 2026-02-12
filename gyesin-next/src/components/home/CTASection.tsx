@@ -100,7 +100,7 @@ export default function CTASection() {
   }, { scope: containerRef });
 
   return (
-    <section id="cta" ref={containerRef} className="py-24 bg-linear-to-b from-[#0f172a] to-black relative overflow-hidden">
+    <section id="cta" ref={containerRef} className="py-12 md:py-24 bg-linear-to-b from-[#0f172a] to-black relative overflow-hidden">
       <div className="absolute inset-0 bg-[#0b1221] opacity-95"></div>
       <div className="absolute top-0 right-0 w-96 h-96 bg-neon-purple/10 rounded-full blur-[100px]"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-neon-cyan/10 rounded-full blur-[100px]"></div>
@@ -113,11 +113,11 @@ export default function CTASection() {
           <p className="text-gray-400">현직 공인중개사 분들의 실제 사용 후기입니다.</p>
         </div>
 
-        <div className="flex flex-col space-y-8 mb-24">
+        <div className="flex flex-col space-y-8 mb-12 md:mb-24">
           {testimonials.map((item, index) => (
             <div key={item.id} className="chat-bubble-container flex items-start gap-4 invisible">
               <div className="shrink-0 flex flex-col items-center gap-2 mt-1">
-                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-neon-cyan/30 shadow-[0_0_10px_rgba(0,243,255,0.2)] relative bg-gray-800">
+                 <div className="w-10 h-10 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-neon-cyan/30 shadow-[0_0_10px_rgba(0,243,255,0.2)] relative bg-gray-800">
                     <Image
                         src={item.image}
                         alt={item.author}
@@ -128,7 +128,7 @@ export default function CTASection() {
                  </div>
               </div>
 
-              <div className="flex flex-col items-start max-w-[80%] md:max-w-[70%]">
+              <div className="flex flex-col items-start max-w-[85%] md:max-w-[70%]">
                  <span className="text-xs text-gray-400 mb-1 ml-1 block">{item.role}</span>
                 <div className="relative bg-[#2d3036] text-white p-4 rounded-r-2xl rounded-bl-2xl shadow-md border border-[#3e434d] overflow-hidden group">
                     <div className="relative overflow-hidden inline-block z-10">
@@ -154,7 +154,7 @@ export default function CTASection() {
           ))}
         </div>
 
-        <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-xl">
+        <div className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-12 backdrop-blur-xl">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-2 text-white">무료 상담 신청</h3>
               <p className="text-gray-400">문의를 남겨주시면 &apos;계약의 신&apos; 전문 컨설턴트가 연락드립니다.</p>

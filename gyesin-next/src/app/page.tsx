@@ -258,15 +258,16 @@ export default function ContractGodLanding() {
               &quot;
             </span>
           </h1>
-          <div className="hero-text invisible mb-10 w-full max-w-4xl mx-auto overflow-hidden flex select-none">
-            {/* First Copy */}
-            <div className="animate-marquee-scroll whitespace-nowrap flex-shrink-0 min-w-full px-20 flex justify-center text-2xl md:text-3xl text-gray-300 font-medium">
-             공인중개사를 위한 <span className="text-neon-cyan font-bold mx-2">AI 업무비서!</span>&nbsp;&nbsp;&nbsp;&nbsp;중개업무의 혁신을 이루다!
-            </div>
-            {/* Second Copy for Seamless Loop */}
-            <div className="animate-marquee-scroll whitespace-nowrap flex-shrink-0 min-w-full px-20 flex justify-center text-2xl md:text-3xl text-gray-300 font-medium">
-             공인중개사를 위한 <span className="text-neon-cyan font-bold mx-2">AI 업무비서!</span>&nbsp;&nbsp;&nbsp;&nbsp;중개업무의 혁신을 이루다!
-            </div>
+          <div className="hero-text mb-10 w-full max-w-4xl mx-auto overflow-hidden flex select-none mask-image-gradient">
+            {/* Infinite Marquee Loop - Increased duplication to prevent gaps */}
+            {[...Array(4)].map((_, i) => (
+              <div 
+                key={i}
+                className="animate-marquee-scroll whitespace-nowrap shrink-0 w-max px-4 flex items-center text-lg md:text-3xl text-gray-300 font-medium"
+              >
+               공인중개사를 위한 <span className="text-neon-cyan font-bold mx-2">AI 업무비서!</span>&nbsp;&nbsp;&nbsp;&nbsp;중개업무의 혁신을 이루다!
+              </div>
+            ))}
           </div>
 
           <div className="hero-text invisible flex justify-center gap-4 mb-[38px]">
@@ -312,16 +313,16 @@ export default function ContractGodLanding() {
       <ProblemSection />
 
       {/* 3. Solution Section: 해결책 */}
-      <section id="solution" className="py-24 relative overflow-hidden">
+      <section id="solution" className="py-12 md:py-24 relative overflow-hidden">
         {/* 배경 장식 */}
         <div className="absolute right-0 top-1/4 w-[500px] h-[500px] bg-neon-cyan/10 rounded-full blur-[100px]"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
             <div className="solution-content invisible">
               <h2 className="text-neon-cyan font-bold tracking-widest mb-2 uppercase text-sm">All-in-One Platform</h2>
-              <h3 className="text-4xl font-bold mb-6 leading-snug">
+              <h3 className="text-2xl md:text-4xl font-bold mb-6 leading-snug">
                 꼼꼼하고 똑똑한<br />
                 <span className="text-neon-purple">업무 자동화</span>의 실현
               </h3>

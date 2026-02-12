@@ -73,3 +73,19 @@ body {
 .animate-shimmer-periodic {
   animation: shimmer-periodic 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.animate-marquee-scroll {
+  animation: marquee-scroll 10s linear infinite;
+  -webkit-animation: marquee-scroll 10s linear infinite;
+  will-change: transform;
+}
