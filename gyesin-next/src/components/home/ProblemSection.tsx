@@ -126,7 +126,7 @@ export default function ProblemSection() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} id="problem" className="relative py-12 md:py-24 min-h-screen flex flex-col items-center justify-center bg-[#050A14] overflow-hidden">
+    <section ref={containerRef} id="problem" className="relative py-8 md:py-24 min-h-screen flex flex-col items-center justify-center bg-[#050A14] overflow-hidden">
 
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
