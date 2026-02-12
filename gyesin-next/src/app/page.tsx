@@ -240,7 +240,7 @@ export default function ContractGodLanding() {
       </nav>
 
       {/* 1. Hero Section: Chaos to Order */}
-      <section id="hero" className="relative h-auto md:min-h-screen flex flex-col items-center pt-[108px] pb-8 md:pb-0 overflow-hidden">
+      <section id="hero" className="relative h-auto md:min-h-screen flex flex-col items-center pt-[108px] pb-6 md:pb-0 overflow-hidden">
         {/* 배경 그라디언트 효과 (네온 분위기) */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-neon-cyan/20 rounded-full blur-[120px] mix-blend-screen animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-neon-purple/20 rounded-full blur-[120px] mix-blend-screen animate-pulse delay-75"></div>
