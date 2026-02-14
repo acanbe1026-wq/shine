@@ -321,7 +321,7 @@ export default function CTASection() {
                  <button type="submit" className="flex-1 bg-linear-to-r from-neon-purple to-neon-cyan text-deep-blue font-bold text-lg py-4 rounded-lg hover:shadow-[0_0_20px_rgba(178,58,255,0.4)] transition-all transform hover:-translate-y-1">
                    문의하기
                  </button>
-                 <a href="/reg_info" className="flex-1 bg-transparent border border-neon-cyan text-neon-cyan font-bold text-lg py-4 rounded-lg hover:bg-neon-cyan hover:text-deep-blue hover:shadow-[0_0_20px_rgba(0,243,255,0.6)] transition-all transform hover:-translate-y-1 block text-center">
+                 <a href="https://gyesin.com/reg_info" target="_blank" rel="noopener noreferrer" className="flex-1 bg-transparent border border-neon-cyan text-neon-cyan font-bold text-lg py-4 rounded-lg hover:bg-neon-cyan hover:text-deep-blue hover:shadow-[0_0_20px_rgba(0,243,255,0.6)] transition-all transform hover:-translate-y-1 block text-center">
                    가입하기
                  </a>
               </div>
