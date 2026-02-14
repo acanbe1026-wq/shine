@@ -110,10 +110,10 @@ export default function CTASection() {
       message: formData.message,
     };
 
-    // EmailJS credentials provided by user
+    // TODO: 아래의 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', 'YOUR_PUBLIC_KEY'를 실제 EmailJS 값으로 변경해주세요.
     emailjs.send(
       'service_2zev0on',
-      'template_4gmlkm7',
+      'template_4gmlkn7',
       templateParams,
       'xmWI7YDOAKazvh19n'
     ).then(
