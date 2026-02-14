@@ -96,7 +96,7 @@ export default function ConsultationPage() {
         <div className="max-w-4xl mx-auto">
             <div className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-12 backdrop-blur-xl">
                 <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2 text-white break-keep">무료 상담 신청</h3>
+                <h3 className="text-2xl font-bold mb-2 text-white break-keep">상담문의</h3>
                 <p className="text-gray-400 break-keep">문의를 남겨주시면 &apos;계약의 신&apos; 전문 컨설턴트가 연락드립니다.</p>
                 </div>
 
