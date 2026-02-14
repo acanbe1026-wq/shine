@@ -271,7 +271,7 @@ export default function ContractGodLanding() {
           </div>
 
           <div className="hero-text invisible flex justify-center gap-4 mb-[38px]">
-            <Link href="https://gyesin.com/reg_info" className="group relative px-8 py-4 bg-transparent border border-neon-cyan text-neon-cyan font-bold rounded-lg overflow-hidden transition-all hover:bg-neon-cyan hover:text-deep-blue hover:shadow-[0_0_20px_rgba(0,243,255,0.6)] inline-block text-center">
+            <Link href="/reg_info" className="group relative px-8 py-4 bg-transparent border border-neon-cyan text-neon-cyan font-bold rounded-lg overflow-hidden transition-all hover:bg-neon-cyan hover:text-deep-blue hover:shadow-[0_0_20px_rgba(0,243,255,0.6)] inline-block text-center">
               <span className="relative z-10 flex items-center justify-center gap-2">
                 가입하기 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
