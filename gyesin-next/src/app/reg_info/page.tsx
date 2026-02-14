@@ -56,8 +56,8 @@ export default function RegistrationInfoPage() {
 
           <form id="f_agent_info" className="space-y-6">
             {/* 부동산 명 */}
-            <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-2 md:gap-4 items-center">
-              <label htmlFor="agent_name" className="flex items-center gap-1 font-medium text-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-center">
+              <label htmlFor="agent_name" className="flex items-center gap-1 font-medium text-gray-700 whitespace-nowrap">
                 <Check className="w-4 h-4 text-blue-500" /> 부동산 명
               </label>
               <div>
@@ -66,8 +66,8 @@ export default function RegistrationInfoPage() {
             </div>
 
             {/* 대표자 명 */}
-            <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-2 md:gap-4 items-center">
-              <label htmlFor="agent_ceo" className="flex items-center gap-1 font-medium text-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-center">
+              <label htmlFor="agent_ceo" className="flex items-center gap-1 font-medium text-gray-700 whitespace-nowrap">
                 <Check className="w-4 h-4 text-blue-500" /> 대표자 명
               </label>
               <div>
@@ -76,10 +76,10 @@ export default function RegistrationInfoPage() {
             </div>
 
             {/* 사업자번호 */}
-            <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-2 md:gap-4 items-start md:items-center">
-              <label className="flex items-center gap-1 font-medium text-gray-700 pt-2 md:pt-0">
+            <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-start md:items-center">
+              <label className="flex items-center gap-1 font-medium text-gray-700 pt-2 md:pt-0 whitespace-nowrap">
                 <Check className="w-4 h-4 text-blue-500" /> 사업자번호
-                <button type="button" id="btn_overlap_busino" className="ml-2 px-3 py-1 bg-gray-600 text-white text-xs rounded hover:bg-gray-700 transition-colors flex items-center gap-1">
+                <button type="button" id="btn_overlap_busino" className="ml-2 px-3 py-1 bg-gray-600 text-white text-xs rounded hover:bg-gray-700 transition-colors flex items-center gap-1 shrink-0">
                   중복확인
                 </button>
               </label>
@@ -94,8 +94,8 @@ export default function RegistrationInfoPage() {
             </div>
 
             {/* 등록번호 */}
-            <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-2 md:gap-4 items-center">
-              <label className="flex items-center gap-1 font-medium text-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-center">
+              <label className="flex items-center gap-1 font-medium text-gray-700 whitespace-nowrap">
                 <Check className="w-4 h-4 text-blue-500" /> 등록번호
               </label>
               <div className="flex items-center gap-2 flex-wrap">
@@ -108,10 +108,10 @@ export default function RegistrationInfoPage() {
             </div>
 
             {/* 소재지 */}
-            <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-2 md:gap-4 items-start md:items-center">
-              <label className="flex items-center gap-1 font-medium text-gray-700 pt-2 md:pt-0">
+            <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-start md:items-center">
+              <label className="flex items-center gap-1 font-medium text-gray-700 pt-2 md:pt-0 whitespace-nowrap">
                 <Check className="w-4 h-4 text-blue-500" /> 소재지
-                <button type="button" onClick={handlePostcodeOpen} className="ml-2 px-3 py-1 bg-blue-600 text-white text-xs rounded hover:bg-blue-700 transition-colors">
+                <button type="button" onClick={handlePostcodeOpen} className="ml-2 px-3 py-1 bg-blue-600 text-white text-xs rounded hover:bg-blue-700 transition-colors shrink-0">
                   검색
                 </button>
               </label>
@@ -122,10 +122,10 @@ export default function RegistrationInfoPage() {
             </div>
 
             {/* 아이디 */}
-            <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-2 md:gap-4 items-start md:items-center">
-              <label htmlFor="admin_id" className="flex items-center gap-1 font-medium text-gray-700 pt-2 md:pt-0">
+            <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-start md:items-center">
+              <label htmlFor="admin_id" className="flex items-center gap-1 font-medium text-gray-700 pt-2 md:pt-0 whitespace-nowrap">
                 <Check className="w-4 h-4 text-blue-500" /> 아이디
-                <button type="button" id="btn_overlap_check" className="ml-2 px-3 py-1 bg-gray-600 text-white text-xs rounded hover:bg-gray-700 transition-colors">
+                <button type="button" id="btn_overlap_check" className="ml-2 px-3 py-1 bg-gray-600 text-white text-xs rounded hover:bg-gray-700 transition-colors shrink-0">
                   중복확인
                 </button>
               </label>
@@ -136,8 +136,8 @@ export default function RegistrationInfoPage() {
             </div>
 
             {/* 비밀번호 */}
-            <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-2 md:gap-4 items-center">
-              <label htmlFor="passwd" className="flex items-center gap-1 font-medium text-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-center">
+              <label htmlFor="passwd" className="flex items-center gap-1 font-medium text-gray-700 whitespace-nowrap">
                 <Check className="w-4 h-4 text-blue-500" /> 비밀번호
               </label>
               <div>
@@ -146,8 +146,8 @@ export default function RegistrationInfoPage() {
             </div>
 
             {/* 비밀번호 확인 */}
-            <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-2 md:gap-4 items-center">
-              <label htmlFor="passwd_confirm" className="flex items-center gap-1 font-medium text-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-center">
+              <label htmlFor="passwd_confirm" className="flex items-center gap-1 font-medium text-gray-700 whitespace-nowrap">
                 <Check className="w-4 h-4 text-blue-500" /> 비밀번호 확인
               </label>
               <div>
@@ -156,8 +156,8 @@ export default function RegistrationInfoPage() {
             </div>
 
             {/* 이메일 */}
-            <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-2 md:gap-4 items-center">
-              <label htmlFor="email" className="flex items-center gap-1 font-medium text-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-center">
+              <label htmlFor="email" className="flex items-center gap-1 font-medium text-gray-700 whitespace-nowrap">
                 <Check className="w-4 h-4 text-blue-500" /> 이메일
               </label>
               <div>
@@ -166,8 +166,8 @@ export default function RegistrationInfoPage() {
             </div>
 
             {/* 대표 휴대폰 */}
-            <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-2 md:gap-4 items-center">
-              <label htmlFor="mobile_1" className="flex items-center gap-1 font-medium text-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-center">
+              <label htmlFor="mobile_1" className="flex items-center gap-1 font-medium text-gray-700 whitespace-nowrap">
                 <Check className="w-4 h-4 text-blue-500" /> 대표 휴대폰
               </label>
               <div className="flex items-center gap-2 flex-wrap">
@@ -188,8 +188,8 @@ export default function RegistrationInfoPage() {
             </div>
 
             {/* 대표 전화번호 */}
-            <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-2 md:gap-4 items-center">
-              <label htmlFor="telephone_1" className="flex items-center gap-1 font-medium text-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-center">
+              <label htmlFor="telephone_1" className="flex items-center gap-1 font-medium text-gray-700 whitespace-nowrap">
                 <Check className="w-4 h-4 text-blue-500" /> 대표 전화번호
               </label>
               <div className="flex items-center gap-2 flex-wrap">
@@ -222,8 +222,8 @@ export default function RegistrationInfoPage() {
             </div>
 
             {/* 중개사무소 IP */}
-            <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-2 md:gap-4 items-center">
-              <label htmlFor="agent_host" className="flex items-center gap-1 font-medium text-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-center">
+              <label htmlFor="agent_host" className="flex items-center gap-1 font-medium text-gray-700 whitespace-nowrap">
                 <Check className="w-4 h-4 text-blue-500" /> 중개사무소 IP
               </label>
               <div>
@@ -232,8 +232,8 @@ export default function RegistrationInfoPage() {
             </div>
 
             {/* 영업담당자 코드 */}
-            <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-2 md:gap-4 items-center">
-              <label htmlFor="seller" className="flex items-center gap-1 font-medium text-gray-700 pl-5">
+            <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-center">
+              <label htmlFor="seller" className="flex items-center gap-1 font-medium text-gray-700 whitespace-nowrap pl-5">
                 영업담당자 코드
               </label>
               <div>
