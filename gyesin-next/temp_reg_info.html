@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title>계약의 신 회원가입</title>
+
+<link rel="stylesheet" href="/css/jquery-ui.min.css">
+<link rel='stylesheet' href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' type='text/css'>
+<link rel="stylesheet" href="/css/style.css?ver=20260214" />
+<link rel="stylesheet" href="/css/agree.css?ver=20260214" />
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+<script src="/js/jquery.form.min.js"></script>
+<script src="/js/common.js?ver=20260214"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="/js/reg_info.js?ver=20260214"></script>
+</head>
+
+<body>
+<div id="admin-wrapper">
+	<div id="admin-header">
+		<div class="admin-top-content">
+			<h1 class="top-logo">
+				<a href="/"><img src="/img/text_logo.png"></a>
+			</h1>
+		</div>
+	</div>
+	<div id="wrapper">
+		<div class="admin_reg content_form">
+			<h2>회원정보 입력</h2>
+			<form id="f_agent_info">
+				<meta name="csrf_token" content="2mogC23npzXv9i1zSn6z8u7hlBOc2c44VX53jMC0" />
+				<table>
+				<tr>
+					<th><span class='ui-icon ui-icon-check'></span>부동산 명</th>
+					<td><input type="text" class="input_177" id="agent_name" name="agent_name" value="" /></td>
+				</tr>
+				<tr>
+					<th><span class='ui-icon ui-icon-check'></span>대표자 명</th>
+					<td><input type="text" class="input_177" id="agent_ceo" name="agent_ceo" value="" /></td>
+				</tr>
+				<tr>
+					<th><span class='ui-icon ui-icon-check'></span>사업자번호
+						<button type='button' class='ui-button ui-0-20' id='btn_overlap_busino'>중복확인<span class='ui-icon ui-icon-search'></span></button></th>
+					<td>
+						<input type="text" class="input_80" id="agent_busino_1" name="agent_busino_1" value="" maxlength="3" /> - 
+						<input type="text" class="input_50" id="agent_busino_2" name="agent_busino_2" value="" maxlength="2" /> - 
+						<input type="text" class="input_100" id="agent_busino_3" name="agent_busino_3" value="" maxlength="5" />
+						<input type='hidden' id='agent_busino_chk' value='N' />
+					</td>
+				</tr>
+				<tr>
+					<th><span class='ui-icon ui-icon-check'></span>등록번호</th>
+					<td>
+						<input type="text" class="input_100" id="agent_bubin_1" name="agent_bubin_1" value="" maxlength="5" /> -
+						<input type="text" class="input_80" id="agent_bubin_2" name="agent_bubin_2" value="" maxlength="4" /> -
+						<input type="text" class="input_100" id="agent_bubin_3" name="agent_bubin_3" value="" maxlength="5" />
+					</td>
+				</tr>
+				<tr>
+					<th><span class='ui-icon ui-icon-check'></span>소재지 <button type="button" class="ui-button ui-0-20" onclick="common.search_address('','ji');">검색</button></th>
+					<td>
+						<input type="text" class="input_50_per" id="address" name="agent_address" value="" readonly />
+						* 행정동 주소
+					</td>
+				</tr>
+				<tr>
+					<th><span class='ui-icon ui-icon-check'></span>아이디
+						<button type='button' class='ui-button ui-0-20' id='btn_overlap_check'>중복확인<span class='ui-icon ui-icon-search'></span></button></th>
+					<td>
+						<input type='text' class='input_177' id='admin_id' name='admin_id' />
+						<input type='hidden' id='admin_id_chk' value='N' />
+					</td>
+				</tr>
+				<tr>
+					<th><span class='ui-icon ui-icon-check'></span>비밀번호</th>
+					<td><input type="password" class="input_177" id="passwd" name="passwd" /></td>
+				</tr>
+				<tr>
+					<th><span class='ui-icon ui-icon-check'></span>비밀번호 확인</th>
+					<td><input type="password" class="input_177" id="passwd_confirm" name="passwd_confirm" /></td>
+				</tr>
+				<tr>
+					<th><span class='ui-icon ui-icon-check'></span>이메일</th>
+					<td><input type="text" class="input_177" id="email" name="email" value="" /></td>
+				</tr>
+				<tr>
+					<th><span class='ui-icon ui-icon-check'></span>대표 휴대폰</th>
+					<td>
+						<select id="mobile_1" name="mobile_1">
+							<option value="">선택</option>
+							<option value='010' >010</option><option value='011' >011</option><option value='016' >016</option><option value='017' >017</option><option value='018' >018</option><option value='019' >019</option>						</select>
+						-
+						<input type="text" id="mobile_2" name="mobile_2" maxlength="4" style="width:50px;" value="" /> - 
+						<input type="text" id="mobile_3" name="mobile_3" maxlength="4" style="width:50px;" value="" />
+					</td>
+				</tr>
+				<tr>
+					<th><span class='ui-icon ui-icon-check'></span>대표 전화번호</th>
+					<td>
+						<select id="telephone_1" name="telephone_1">
+							<option value="">선택</option>
+							<option value='02'>02</option><option value='031'>031</option><option value='032'>032</option><option value='033'>033</option><option value='041'>041</option><option value='042'>042</option><option value='043'>043</option><option value='051'>051</option><option value='052'>052</option><option value='053'>053</option><option value='054'>054</option><option value='055'>055</option><option value='061'>061</option><option value='062'>062</option><option value='063'>063</option><option value='064'>064</option><option value='070'>070</option><option value='080'>080</option>						</select>
+						-
+						<input type="text" id="telephone_2" name="telephone_2" maxlength="4" style="width:50px;" value="" /> - 
+						<input type="text" id="telephone_3" name="telephone_3" maxlength="4" style="width:50px;" value="" />
+					</td>
+				</tr>
+				<tr>
+					<th><span class='ui-icon ui-icon-check'></span>중개사무소 IP</th>
+					<td>
+						<input type="text" class="input_177" id="agent_host" name="agent_host" value="1.231.94.94" />
+					</td>
+				</tr>
+				<tr style="display:none;">
+					<th>영업담당자 코드</th>
+					<td>
+						<input type="text" class="input_177" id="seller" name="seller" value="" />
+					</td>
+				</tr>
+				</table>
+			</form>
+
+			<div class="chk_agree"></div>
+			
+			<br/>
+			
+			<button type="button" id="btn_agent_submit" class="ui-button ui-blue-70-30 btn_agree">등록 하기</button>
+		</div>
+	</div>
+</div>
+<div class="footer_agree">
+	<div class="copyright">Copyright © <strong>계약의 신</strong>. All Rights Reserved.</div>
+</div>
+</body>
+</html>
