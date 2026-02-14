@@ -50,7 +50,7 @@ export default function ContractGodLanding() {
     // GSAP 플러그인 등록 (클라이언트 사이드에서만 안전하게 실행)
     gsap.registerPlugin(ScrollTrigger);
 
-    // 1. Hero Section: 텍스트 순차 등장 및 배경 파티클 효과
+    // 1. Hero Section: 텍스트 순차 등장 (배경 파티클 효과는 CSS/InteractiveBackground로 처리)
     const heroTl = gsap.timeline();
     heroTl.fromTo('.hero-text',
       { y: 50, autoAlpha: 0 },
@@ -61,15 +61,7 @@ export default function ContractGodLanding() {
         stagger: 0.2,
         ease: 'power3.out'
       }
-    )
-      .fromTo('.hero-image',
-        { y: 100, autoAlpha: 0 },
-        {
-          y: 0,
-          autoAlpha: 1,
-          duration: 1.2,
-          ease: 'power2.out'
-        }, '-=0.5');
+    );
 
     // 2. Problem Section: 카드 순차 등장 (ScrollTrigger)
     gsap.fromTo('.problem-card',
@@ -280,7 +272,7 @@ export default function ContractGodLanding() {
 
           {/* 태블릿/모바일 인터페이스 이미지 (Source 4 반영) */}
           {/* 태블릿/모바일 인터페이스 이미지 (Source 4 반영) */}
-          <div className="hero-image invisible relative mx-auto w-full max-w-4xl rounded-2xl" style={{ aspectRatio: '1024/574' }}>
+          <div className="hero-image relative mx-auto w-full max-w-4xl rounded-2xl" style={{ aspectRatio: '1024/574' }}>
             <div className="grid grid-cols-1 grid-rows-1 w-full h-full">
                {heroImages.map((src, index) => (
                   <div 
@@ -301,12 +293,7 @@ export default function ContractGodLanding() {
 
         </div>
 
-        {/* 스크롤 힌트 */}
-        <div className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-gray-500">
-          <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-2 bg-neon-cyan rounded-full animate-pulse"></div>
-          </div>
-        </div>
+        {/* 스크롤 힌트 제거됨 */}
       </section>
 
       {/* 2. Problem Section: 문제 제기 (Updated) */}
