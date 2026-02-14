@@ -107,10 +107,10 @@ export default function CTASection() {
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white break-keep">
             <span className="text-neon-cyan">계약의 신</span>을 생생한 후기로 만나보세요
           </h2>
-          <p className="text-gray-400">현직 공인중개사 분들의 실제 사용 후기입니다.</p>
+          <p className="text-gray-400 break-keep">현직 공인중개사 분들의 실제 사용 후기입니다.</p>
         </div>
 
         <div className="flex flex-col space-y-8 mb-12 md:mb-24">
@@ -132,7 +132,7 @@ export default function CTASection() {
                  <span className="text-xs text-gray-400 mb-1 ml-1 block">{item.role}</span>
                 <div className="relative bg-[#2d3036] text-white p-4 rounded-r-2xl rounded-bl-2xl shadow-md border border-[#3e434d] overflow-hidden group">
                     <div className="relative overflow-hidden inline-block z-10">
-                        <p className="text-sm md:text-base leading-relaxed relative z-10 whitespace-pre-wrap">
+                        <p className="text-sm md:text-base leading-relaxed relative z-10 whitespace-pre-wrap break-keep">
                             {item.text}
                         </p>
                     </div>
@@ -156,8 +156,8 @@ export default function CTASection() {
 
         <div className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-12 backdrop-blur-xl">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-2 text-white">무료 상담 신청</h3>
-              <p className="text-gray-400">문의를 남겨주시면 &apos;계약의 신&apos; 전문 컨설턴트가 연락드립니다.</p>
+              <h3 className="text-2xl font-bold mb-2 text-white break-keep">무료 상담 신청</h3>
+              <p className="text-gray-400 break-keep">문의를 남겨주시면 &apos;계약의 신&apos; 전문 컨설턴트가 연락드립니다.</p>
             </div>
 
             <form className="space-y-4 max-w-lg mx-auto" onSubmit={(e) => e.preventDefault()}>

@@ -143,12 +143,12 @@ export default function ProblemSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-16 problem-header">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white leading-tight break-keep">
             유창한 언변과 중개실무만으로<br/>
             <span className="text-gray-400">매출의 한계</span>를 느끼시나요?
           </h2>
           <div className="inline-block relative group cursor-default">
-            <p className="text-xl md:text-2xl text-transparent bg-clip-text bg-linear-to-r from-neon-cyan to-neon-purple font-bold tracking-wide pb-1">
+            <p className="text-xl md:text-2xl text-transparent bg-clip-text bg-linear-to-r from-neon-cyan to-neon-purple font-bold tracking-wide pb-1 break-keep">
               &quot;계약의 신&quot;은 그 한계를 깨뜨려 드립니다.
             </p>
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-linear-to-r from-neon-cyan to-neon-purple transform scale-x-0 transition-transform duration-500 group-hover:scale-x-100 origin-left"></span>
@@ -180,17 +180,17 @@ export default function ProblemSection() {
                   
                   <div className="grow flex flex-col justify-between">
                       <div className="mb-4">
-                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-neon-cyan transition-colors duration-300">{item.title}</h3>
+                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-neon-cyan transition-colors duration-300 break-keep">{item.title}</h3>
                         <div className="flex gap-3 items-start p-3 rounded-lg bg-red-500/5 border border-red-500/10 group-hover:bg-red-500/10 transition-colors">
                             <span className="text-red-400 font-bold shrink-0 text-sm mt-0.5">Q.</span>
-                            <p className="text-gray-300 text-sm leading-relaxed font-medium">{item.q}</p>
+                            <p className="text-gray-300 text-sm leading-relaxed font-medium break-keep">{item.q}</p>
                         </div>
                       </div>
                       
                       <div className="pt-4 mt-auto border-t border-white/10 group-hover:border-neon-cyan/20 transition-colors">
                         <div className="flex gap-3 items-start">
                             <span className="text-neon-cyan font-bold shrink-0 text-sm mt-0.5">A.</span>
-                            <p className="text-gray-100 text-sm leading-relaxed font-semibold group-hover:text-white transition-colors">{item.a}</p>
+                            <p className="text-gray-100 text-sm leading-relaxed font-semibold group-hover:text-white transition-colors break-keep">{item.a}</p>
                         </div>
                       </div>
                   </div>

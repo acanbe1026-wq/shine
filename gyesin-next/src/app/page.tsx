@@ -247,7 +247,7 @@ export default function ContractGodLanding() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 w-full">
           <h2 className="hero-text invisible text-neon-cyan font-bold tracking-wider mb-4 uppercase"></h2>
-          <h1 className="hero-text invisible text-4xl md:text-6xl font-extrabold mb-6 leading-tight max-w-4xl mx-auto flex flex-col items-center">
+          <h1 className="hero-text invisible text-4xl md:text-6xl font-extrabold mb-6 leading-tight max-w-4xl mx-auto flex flex-col items-center break-keep">
             <span>국내 유일 반응형 부동산중개 플랫폼</span>
             <span className="text-neon-purple inline-flex items-center gap-1 mt-2">
               &quot;
@@ -322,11 +322,11 @@ export default function ContractGodLanding() {
 
             <div className="solution-content invisible">
               <h2 className="text-neon-cyan font-bold tracking-widest mb-2 uppercase text-sm">All-in-One Platform</h2>
-              <h3 className="text-2xl md:text-4xl font-bold mb-6 leading-snug">
+              <h3 className="text-2xl md:text-4xl font-bold mb-6 leading-snug break-keep">
                 꼼꼼하고 똑똑한<br />
                 <span className="text-neon-purple">업무 자동화</span>의 실현
               </h3>
-              <p className="text-gray-300 mb-8 leading-relaxed">
+              <p className="text-gray-300 mb-8 leading-relaxed break-keep">
                 반응형 웹과 APP 구현으로 언제 어디서나 대량의 DB를 관리하세요.
                 매일 해야 할 일을 AI가 자동으로 할당해 드립니다.
               </p>
@@ -338,7 +338,7 @@ export default function ContractGodLanding() {
                   "방문, 계약, 잔금, 매물, 고객, 만기 관리가 유기적으로 연동",
                   "꼼꼼하고 똑똑한 업무자동화 실현"
                 ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-300">
+                  <li key={index} className="flex items-start gap-3 text-gray-300 break-keep">
                     <CheckCircle2 className="w-5 h-5 text-neon-green shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -361,8 +361,8 @@ export default function ContractGodLanding() {
                         <feature.icon className="w-6 h-6" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-lg">{feature.title}</h4>
-                        <p className="text-sm text-gray-400">{feature.desc}</p>
+                        <h4 className="font-bold text-lg break-keep">{feature.title}</h4>
+                        <p className="text-sm text-gray-400 break-keep">{feature.desc}</p>
                       </div>
                     </div>
                   </div>
@@ -378,7 +378,7 @@ export default function ContractGodLanding() {
       <CTASection />
 
       {/* Footer */}
-      <footer className="py-12 border-t border-white/10 text-center text-gray-500 text-xs bg-[#0b1221]">
+      <footer className="py-12 border-t border-white/10 text-center text-gray-500 text-xs bg-[#0b1221] break-keep">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8 flex justify-center gap-8 text-sm">
             <a href="https://home.gyesin.com/term.php" target="_blank" rel="noopener noreferrer" className="hover:text-neon-cyan transition-colors">이용약관</a>
