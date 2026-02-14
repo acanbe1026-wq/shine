@@ -6,6 +6,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { MessageCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 // Register ScrollTrigger
 if (typeof window !== 'undefined') {
@@ -75,7 +77,62 @@ const testimonials: Testimonial[] = [
 // Inside component:
 export default function CTASection() {
   // ... (GSAP code same as before)
+
   const containerRef = useRef<HTMLDivElement>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    contact: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // 입력값 검증
+    if (!formData.name || !formData.contact || !formData.email || !formData.message) {
+      alert('모든 항목을 입력해주세요.');
+      return;
+    }
+
+    const templateParams = {
+      from_name: formData.name,
+      from_contact: formData.contact,
+      from_email: formData.email,
+      message: formData.message,
+    };
+
+    // EmailJS credentials provided by user
+    emailjs.send(
+      'service_2zev0on',
+      'template_4gmlkm7',
+      templateParams,
+      'xmWI7YDOAKazvh19n'
+    ).then(
+      (response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('접수 완료');
+        setFormData({
+          name: '',
+          contact: '',
+          email: '',
+          message: ''
+        });
+      },
+      (err) => {
+        console.log('FAILED...', err);
+        alert('전송에 실패했습니다. 다시 시도해주세요.');
+      }
+    );
+  };
 
   useGSAP(() => {
     // ... same GSAP logic
@@ -160,14 +217,45 @@ export default function CTASection() {
               <p className="text-gray-400 break-keep">문의를 남겨주시면 &apos;계약의 신&apos; 전문 컨설턴트가 연락드립니다.</p>
             </div>
 
-            <form className="space-y-4 max-w-lg mx-auto" onSubmit={(e) => e.preventDefault()}>
-              {/* Form inputs same as before */}
-              <input type="text" placeholder="성명" className="w-full bg-black/50 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500" />
-              <input type="text" placeholder="연락처" className="w-full bg-black/50 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500" />
-              <input type="email" placeholder="E-mail 주소" className="w-full bg-black/50 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500" />
-              <textarea placeholder="문의내용" rows={4} className="w-full bg-black/50 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500"></textarea>
+            <form className="space-y-4 max-w-lg mx-auto" onSubmit={sendEmail}>
+              <input 
+                type="text" 
+                name="name"
+                placeholder="성명" 
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full bg-black/50 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500" 
+                required
+              />
+              <input 
+                type="text" 
+                name="contact"
+                placeholder="연락처" 
+                value={formData.contact}
+                onChange={handleChange}
+                className="w-full bg-black/50 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500" 
+                required
+              />
+              <input 
+                type="email" 
+                name="email"
+                placeholder="E-mail 주소" 
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full bg-black/50 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500" 
+                required
+              />
+              <textarea 
+                name="message"
+                placeholder="문의내용" 
+                rows={4} 
+                value={formData.message}
+                onChange={handleChange}
+                className="w-full bg-black/50 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500"
+                required
+              ></textarea>
 
-              <button className="w-full bg-linear-to-r from-neon-purple to-neon-cyan text-deep-blue font-bold text-lg py-4 rounded-lg hover:shadow-[0_0_20px_rgba(178,58,255,0.4)] transition-all transform hover:-translate-y-1">
+              <button type="submit" className="w-full bg-linear-to-r from-neon-purple to-neon-cyan text-deep-blue font-bold text-lg py-4 rounded-lg hover:shadow-[0_0_20px_rgba(178,58,255,0.4)] transition-all transform hover:-translate-y-1">
                 문의하기
               </button>
             </form>

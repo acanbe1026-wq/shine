@@ -1,0 +1,97 @@
+
+
+1. Service ID (예: service_x9....)
+이메일을 발송할 서비스(Gmail, Outlook 등)의 고유 ID입니다.
+
+찾는 법: 왼쪽 사이드바 메뉴에서 **[Email Services]**를 클릭합니다.
+
+확인 위치: 등록한 서비스 목록의 이름 바로 아래 또는 옆에 ID: service_xxxx 형태로 표시되어 있습니다.
+
+2. Template ID (예: template_a1....)
+작성하신 이메일 양식의 고유 ID입니다.
+
+찾는 법: 왼쪽 사이드바 메뉴에서 **[Email Templates]**를 클릭합니다.
+
+확인 위치: 생성한 템플릿 목록에서 해당 템플릿의 제목 아래에 ID: template_xxxx 형태로 적혀 있습니다. (템플릿을 클릭해 들어간 후 상단의 [Settings] 탭에서도 확인 가능합니다.)
+
+3. Public Key (예: user_Pz.... 또는 긴 난수)
+사용자 계정을 식별하기 위한 공개 키입니다. (과거에는 User ID라고 불렸습니다.)
+
+찾는 법: 왼쪽 사이드바 하단의 [Account] 메뉴를 클릭합니다.
+
+확인 위치: 상단 탭 중 **[API Keys]**를 선택하면 Public Key 항목에서 해당 문자열을 복사할 수 있습니다.
+
+참고 사항:
+
+코드 작성 시 Public Key는 emailjs.init("YOUR_PUBLIC_KEY")와 같은 형태로 초기화할 때 주로 사용됩니다.
+
+Private Key는 보안상 절대 외부에 노출되지 않도록 주의해 주세요. (클라이언트 측 자바스크립트 코드에는 Public Key만 사용합니다.)
+
+
+
+
+
+
+
+
+네이버 메일을 EmailJS와 연결하여 Service ID, Template ID, Public Key를 확인하는 방법은 다음과 같습니다.
+
+이 정보들은 네이버 메일 설정창이 아니라, EmailJS 공식 홈페이지의 대시보드에서 확인해야 합니다. 다만, 네이버 메일을 사용하시므로 Service ID를 생성하는 과정에서 네이버의 SMTP 설정이 필요합니다.
+
+1. Service ID (네이버 메일 연결하기)
+EmailJS에서 네이버 메일을 발송 서비스로 등록해야 ID가 생성됩니다.
+
+네이버 메일 설정 (먼저 수행):
+
+네이버 메일 접속 > 왼쪽 메뉴 하단 [환경설정] 클릭.
+
+[POP3/IMAP 설정] 탭 클릭.
+
+**[IMAP/SMTP 설정]**에서 '사용함'으로 체크 후 저장.
+
+EmailJS에서 서비스 등록:
+
+EmailJS 대시보드의 [Email Services] 메뉴로 이동합니다.
+
+[Add New Service] 버튼을 누릅니다.
+
+목록에서 **[SMTP Server]**를 선택합니다. (네이버는 전용 버튼이 없으므로 SMTP를 이용합니다.)
+
+네이버 SMTP 정보 입력:
+
+SMTP Server: smtp.naver.com
+
+Port: 465
+
+Security: SSL 선택
+
+Username/Password: 네이버 아이디와 비밀번호 입력 (2단계 인증 사용 시 '기기별 애플리케이션 비밀번호' 생성 후 입력)
+
+저장을 완료하면 목록에 **Service ID (예: service_xxxx)**가 나타납니다.
+
+2. Template ID
+이메일의 내용을 디자인하고 설정하는 곳에서 확인합니다.
+
+왼쪽 메뉴에서 **[Email Templates]**를 클릭합니다.
+
+이미 만들어둔 템플릿이 있다면, 그 제목 바로 아래에 **ID: template_xxxx**라고 표시되어 있습니다.
+
+템플릿이 없다면 **[Create New Template]**으로 하나를 만드셔야 ID가 발급됩니다.
+
+3. Public Key (공개 키)
+계정 자체의 고유 키값입니다.
+
+왼쪽 사이드바 맨 아래에 있는 **[Account]**를 클릭합니다.
+
+상단 탭에서 **[API Keys]**를 선택합니다.
+
+Public Key 항목 옆에 있는 문자열을 복사하여 사용하면 됩니다.
+
+
+
+service ID : service_2zev0on
+
+template ID : templaste_4gmlkm7
+
+public key : xmWI7YDOAKazvh19n
+
