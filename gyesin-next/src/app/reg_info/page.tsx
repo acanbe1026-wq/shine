@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import Link from 'next/link';
+import { useState } from 'react';
 import Image from 'next/image';
 import DaumPostcodeEmbed from 'react-daum-postcode';
 import { Check } from 'lucide-react';
@@ -244,6 +245,9 @@ export default function RegistrationInfoPage() {
               <button type="button" id="btn_agent_submit" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded shadow-md transition-colors w-full md:w-auto text-lg">
                 등록 하기
               </button>
+              <Link href="/" className="px-8 py-3 bg-gray-600 hover:bg-gray-700 text-white font-bold rounded shadow-md transition-colors w-full md:w-auto text-lg text-center flex items-center justify-center ml-0 md:ml-4 mt-2 md:mt-0">
+                HOME
+              </Link>
             </div>
           </form>
         </div>

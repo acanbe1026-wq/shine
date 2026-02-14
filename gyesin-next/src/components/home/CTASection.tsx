@@ -88,10 +88,34 @@ export default function CTASection() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    
+    // 연락처 자동 하이픈 삽입
+    if (name === 'contact') {
+      // 입력 중에는 하이픈을 강제하지 않고, 숫자만 입력받도록 처리하거나 (위 정규식은 완성형 기준)
+      // 단순하게 숫자만 남기고 -> 포맷팅
+      
+      const str = value.replace(/[^0-9]/g, '');
+      let res = '';
+      if(str.length < 4) {
+          res = str;
+      } else if(str.length < 7) {
+          res = str.substr(0, 3) + '-' + str.substr(3);
+      } else if(str.length < 11) {
+          res = str.substr(0, 3) + '-' + str.substr(3, 3) + '-' + str.substr(6);
+      } else {
+          res = str.substr(0, 3) + '-' + str.substr(3, 4) + '-' + str.substr(7);
+      }
+      
+      setFormData(prev => ({
+        ...prev,
+        [name]: res
+      }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
   };
 
   const sendEmail = (e: React.FormEvent) => {
@@ -233,6 +257,7 @@ export default function CTASection() {
                 placeholder="연락처" 
                 value={formData.contact}
                 onChange={handleChange}
+                maxLength={13}
                 className="w-full bg-black/50 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500" 
                 required
               />
@@ -255,9 +280,14 @@ export default function CTASection() {
                 required
               ></textarea>
 
-              <button type="submit" className="w-full bg-linear-to-r from-neon-purple to-neon-cyan text-deep-blue font-bold text-lg py-4 rounded-lg hover:shadow-[0_0_20px_rgba(178,58,255,0.4)] transition-all transform hover:-translate-y-1">
-                문의하기
-              </button>
+              <div className="flex gap-4 flex-col md:flex-row">
+                 <button type="submit" className="flex-1 bg-linear-to-r from-neon-purple to-neon-cyan text-deep-blue font-bold text-lg py-4 rounded-lg hover:shadow-[0_0_20px_rgba(178,58,255,0.4)] transition-all transform hover:-translate-y-1">
+                   문의하기
+                 </button>
+                 <a href="/reg_info" className="flex-1 bg-transparent border border-neon-cyan text-neon-cyan font-bold text-lg py-4 rounded-lg hover:bg-neon-cyan hover:text-deep-blue hover:shadow-[0_0_20px_rgba(0,243,255,0.6)] transition-all transform hover:-translate-y-1 block text-center">
+                   가입하기
+                 </a>
+              </div>
             </form>
 
             <div className="mt-8 text-center">
