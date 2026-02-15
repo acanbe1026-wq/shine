@@ -8,6 +8,7 @@ import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/c
 import ChannelService from "@/components/ChannelService";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({
             {children}
           </main>
           {/* <Footer /> */}
+          <Analytics />
         </MantineProvider>
       </body>
     </html>

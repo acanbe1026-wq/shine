@@ -3,6 +3,7 @@
 import { Container, Table } from '@mantine/core';
 import { useSearchParams, useRouter } from 'next/navigation'; // Correct import for App Router
 import { Suspense } from 'react';
+import { Footer } from '@/components/layout/Footer';
 
 const notices = [
   { 

@@ -2,6 +2,7 @@
 
 import { Container, Accordion, ThemeIcon } from '@mantine/core';
 import { IconHelp, IconQuestionMark } from '@tabler/icons-react';
+import { Footer } from '@/components/layout/Footer';
 
 export default function FAQPage() {
   const faqs = [

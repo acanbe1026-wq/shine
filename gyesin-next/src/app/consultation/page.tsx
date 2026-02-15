@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { MessageCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { useRouter } from 'next/navigation';
+import { Footer } from '@/components/layout/Footer';
 
 export default function ConsultationPage() {
   const router = useRouter();
@@ -92,6 +93,7 @@ export default function ConsultationPage() {
   };
 
   return (
+    <>
     <div className="min-h-screen bg-linear-to-b from-[#0f172a] to-black py-20 px-4 md:px-0">
         <div className="max-w-4xl mx-auto">
             <div className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-12 backdrop-blur-xl">
@@ -195,5 +197,6 @@ export default function ConsultationPage() {
             </div>
         </div>
     </div>
+    </>
   );
 }
