@@ -109,6 +109,15 @@ function NoticeContent() {
               </div>
            </div>
       </div>
+      
+      <div className="mt-16 flex justify-center">
+        <button 
+          onClick={() => router.push('/')} 
+          className="px-8 py-4 bg-neon-cyan text-deep-blue font-bold rounded-lg transition-all hover:bg-white hover:shadow-[0_0_20px_rgba(0,243,255,0.4)] transform hover:-translate-y-1"
+        >
+          홈으로 돌아가기
+        </button>
+      </div>
     </Container>
   );
 }

@@ -2,9 +2,10 @@
 
 import { Container, Accordion, ThemeIcon } from '@mantine/core';
 import { IconHelp, IconQuestionMark } from '@tabler/icons-react';
-import { Footer } from '@/components/layout/Footer';
+import { useRouter } from 'next/navigation';
 
 export default function FAQPage() {
+  const router = useRouter();
   const faqs = [
     {
       value: 'item-10',
@@ -117,6 +118,15 @@ export default function FAQPage() {
               </Accordion.Item>
             ))}
           </Accordion>
+        </div>
+        
+        <div className="mt-16 flex justify-center">
+          <button 
+            onClick={() => router.push('/')} 
+            className="px-8 py-4 bg-neon-cyan text-deep-blue font-bold rounded-lg transition-all hover:bg-white hover:shadow-[0_0_20px_rgba(0,243,255,0.4)] transform hover:-translate-y-1"
+          >
+            홈으로 돌아가기
+          </button>
         </div>
       </Container>
     </>
